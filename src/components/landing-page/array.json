@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_landing_page_arrays",
+  "info": {
+    "displayName": "array"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

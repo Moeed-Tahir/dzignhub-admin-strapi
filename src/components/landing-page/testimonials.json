@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_landing_page_testimonials",
+  "info": {
+    "displayName": "testimonials"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "quote": {
+      "type": "text"
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "layoutVariant": {
+      "type": "enumeration",
+      "enum": [
+        "variant-1",
+        "variant-2",
+        "variant-3"
+      ]
+    }
+  },
+  "config": {}
+}

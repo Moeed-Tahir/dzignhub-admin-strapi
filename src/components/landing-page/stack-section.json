@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_landing_page_stack_sections",
+  "info": {
+    "displayName": "StackSection"
+  },
+  "options": {},
+  "attributes": {
+    "titleline1": {
+      "type": "string"
+    },
+    "titleline2": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "card": {
+      "type": "component",
+      "component": "landing-page.stack-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

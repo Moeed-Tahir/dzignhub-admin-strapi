@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "landing_pages",
+  "info": {
+    "singularName": "landing-page",
+    "pluralName": "landing-pages",
+    "displayName": "LandingPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "MainHeading": {
+      "type": "string"
+    },
+    "MainDescription": {
+      "type": "text"
+    },
+    "carousal_images": {
+      "type": "component",
+      "component": "landing-page.carousal",
+      "repeatable": true
+    },
+    "stack": {
+      "type": "component",
+      "component": "landing-page.stack-section",
+      "repeatable": true
+    },
+    "work_card": {
+      "type": "component",
+      "component": "landing-page.work-card",
+      "repeatable": true
+    },
+    "templates": {
+      "type": "component",
+      "component": "landing-page.template-item",
+      "repeatable": true
+    },
+    "download_section": {
+      "type": "component",
+      "component": "landing-page.download-section",
+      "repeatable": false
+    },
+    "cards": {
+      "type": "component",
+      "component": "landing-page.card-item",
+      "repeatable": true
+    },
+    "pricing_plans": {
+      "type": "component",
+      "component": "landing-page.plan-item",
+      "repeatable": true
+    },
+    "testimonial_section": {
+      "type": "component",
+      "component": "landing-page.testimonials-section",
+      "repeatable": true
+    },
+    "assistant_section": {
+      "type": "component",
+      "component": "landing-page.assistant-section",
+      "repeatable": true
+    }
+  }
+}

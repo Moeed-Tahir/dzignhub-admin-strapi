@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_landing_page_template_items",
+  "info": {
+    "displayName": "TemplateItem"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "layout": {
+      "type": "enumeration",
+      "enum": [
+        "website",
+        "lummi",
+        "brands",
+        "social ",
+        "slides"
+      ]
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "slides": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

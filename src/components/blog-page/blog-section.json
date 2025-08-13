@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blog_page_blog_sections",
+  "info": {
+    "displayName": "BlogSection"
+  },
+  "options": {},
+  "attributes": {
+    "heroTitle": {
+      "type": "text"
+    },
+    "heroSubtitle": {
+      "type": "string"
+    },
+    "posts": {
+      "type": "component",
+      "component": "blog-page.post",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

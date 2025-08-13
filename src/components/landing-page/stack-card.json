@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_landing_page_stack_cards",
+  "info": {
+    "displayName": "StackCard"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "num": {
+      "type": "string"
+    },
+    "para": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}
