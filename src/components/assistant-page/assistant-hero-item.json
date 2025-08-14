@@ -1,0 +1,58 @@
+{
+  "collectionName": "components_assistant_page_assistant_hero_items",
+  "info": {
+    "displayName": "AssistantHeroItem"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "mainImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "mainImageAlt": {
+      "type": "string"
+    },
+    "leftImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "leftImageAlt": {
+      "type": "string"
+    },
+    "rightImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "rightImageAlt": {
+      "type": "string"
+    },
+    "key": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

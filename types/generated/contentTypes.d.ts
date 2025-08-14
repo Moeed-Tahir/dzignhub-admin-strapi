@@ -410,6 +410,43 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAssistantPageAssistantPage
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'assistant_pages';
+  info: {
+    displayName: 'AssistantPage';
+    pluralName: 'assistant-pages';
+    singularName: 'assistant-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero_section: Schema.Attribute.Component<
+      'assistant-page.assistant-hero-item',
+      true
+    >;
+    image_card: Schema.Attribute.Component<'assistant-page.image-card', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::assistant-page.assistant-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    work_section: Schema.Attribute.Component<
+      'assistant-page.assistant-work',
+      true
+    >;
+  };
+}
+
 export interface ApiBlogPageBlogPage extends Struct.CollectionTypeSchema {
   collectionName: 'blog_pages';
   info: {
@@ -1023,6 +1060,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::assistant-page.assistant-page': ApiAssistantPageAssistantPage;
       'api::blog-page.blog-page': ApiBlogPageBlogPage;
       'api::contact-page.contact-page': ApiContactPageContactPage;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;

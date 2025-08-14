@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_assistant_page_assistant_works",
+  "info": {
+    "displayName": "AssistantWork"
+  },
+  "options": {},
+  "attributes": {
+    "key": {
+      "type": "string"
+    },
+    "headingPre": {
+      "type": "string"
+    },
+    "headingHighlight": {
+      "type": "string"
+    },
+    "headingPost": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cards": {
+      "type": "component",
+      "component": "assistant-page.work-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

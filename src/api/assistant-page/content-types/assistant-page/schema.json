@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "assistant_pages",
+  "info": {
+    "singularName": "assistant-page",
+    "pluralName": "assistant-pages",
+    "displayName": "AssistantPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero_section": {
+      "type": "component",
+      "component": "assistant-page.assistant-hero-item",
+      "repeatable": true
+    },
+    "work_section": {
+      "type": "component",
+      "component": "assistant-page.assistant-work",
+      "repeatable": true
+    },
+    "image_card": {
+      "type": "component",
+      "component": "assistant-page.image-card",
+      "repeatable": true
+    }
+  }
+}
