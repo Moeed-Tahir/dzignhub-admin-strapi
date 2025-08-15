@@ -422,6 +422,10 @@ export interface ApiAssistantPageAssistantPage
     draftAndPublish: true;
   };
   attributes: {
+    content_section: Schema.Attribute.Component<
+      'assistant-page.assistant-content',
+      true
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -437,11 +441,19 @@ export interface ApiAssistantPageAssistantPage
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    smartsupport_section: Schema.Attribute.Component<
+      'assistant-page.smart-support',
+      true
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     work_section: Schema.Attribute.Component<
       'assistant-page.assistant-work',
+      true
+    >;
+    workflow_section: Schema.Attribute.Component<
+      'assistant-page.work-flow',
       true
     >;
   };

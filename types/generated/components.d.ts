@@ -1,5 +1,20 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface AssistantPageAssistantContent extends Struct.ComponentSchema {
+  collectionName: 'components_assistant_page_assistant_contents';
+  info: {
+    displayName: 'AssistantContent';
+  };
+  attributes: {
+    flexCards: Schema.Attribute.Component<'landing-page.array', true>;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    key: Schema.Attribute.String;
+    sectionTitle: Schema.Attribute.String;
+    steps: Schema.Attribute.Component<'landing-page.array', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface AssistantPageAssistantHeroItem extends Struct.ComponentSchema {
   collectionName: 'components_assistant_page_assistant_hero_items';
   info: {
@@ -48,6 +63,21 @@ export interface AssistantPageImageCard extends Struct.ComponentSchema {
   };
 }
 
+export interface AssistantPageSmartSupport extends Struct.ComponentSchema {
+  collectionName: 'components_assistant_page_smart_supports';
+  info: {
+    displayName: 'SmartSupport';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    features: Schema.Attribute.Component<'assistant-page.work-flow-item', true>;
+    headingHighlight: Schema.Attribute.String;
+    headingPost: Schema.Attribute.String;
+    headingPre: Schema.Attribute.String;
+    key: Schema.Attribute.String;
+  };
+}
+
 export interface AssistantPageWorkCard extends Struct.ComponentSchema {
   collectionName: 'components_assistant_page_work_cards';
   info: {
@@ -57,6 +87,30 @@ export interface AssistantPageWorkCard extends Struct.ComponentSchema {
     content: Schema.Attribute.Text;
     logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface AssistantPageWorkFlow extends Struct.ComponentSchema {
+  collectionName: 'components_assistant_page_work_flows';
+  info: {
+    displayName: 'WorkFlow';
+  };
+  attributes: {
+    key: Schema.Attribute.String;
+    text: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+    workflow: Schema.Attribute.Component<'assistant-page.work-flow-item', true>;
+  };
+}
+
+export interface AssistantPageWorkFlowItem extends Struct.ComponentSchema {
+  collectionName: 'components_assistant_page_work_flow_items';
+  info: {
+    displayName: 'WorkFlowItem';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -347,10 +401,14 @@ export interface LandingPageWorkCard extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'assistant-page.assistant-content': AssistantPageAssistantContent;
       'assistant-page.assistant-hero-item': AssistantPageAssistantHeroItem;
       'assistant-page.assistant-work': AssistantPageAssistantWork;
       'assistant-page.image-card': AssistantPageImageCard;
+      'assistant-page.smart-support': AssistantPageSmartSupport;
       'assistant-page.work-card': AssistantPageWorkCard;
+      'assistant-page.work-flow': AssistantPageWorkFlow;
+      'assistant-page.work-flow-item': AssistantPageWorkFlowItem;
       'blog-page.blog-section': BlogPageBlogSection;
       'blog-page.post': BlogPagePost;
       'contact-page.form': ContactPageForm;

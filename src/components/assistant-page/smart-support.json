@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_assistant_page_smart_supports",
+  "info": {
+    "displayName": "SmartSupport"
+  },
+  "options": {},
+  "attributes": {
+    "key": {
+      "type": "string"
+    },
+    "headingPre": {
+      "type": "string"
+    },
+    "headingHighlight": {
+      "type": "string"
+    },
+    "headingPost": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "features": {
+      "type": "component",
+      "component": "assistant-page.work-flow-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

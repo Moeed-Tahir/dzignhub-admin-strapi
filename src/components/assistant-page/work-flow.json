@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_assistant_page_work_flows",
+  "info": {
+    "displayName": "WorkFlow"
+  },
+  "options": {},
+  "attributes": {
+    "key": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "workflow": {
+      "type": "component",
+      "component": "assistant-page.work-flow-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

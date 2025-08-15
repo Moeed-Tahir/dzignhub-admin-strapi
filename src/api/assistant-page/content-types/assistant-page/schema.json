@@ -25,6 +25,21 @@
       "type": "component",
       "component": "assistant-page.image-card",
       "repeatable": true
+    },
+    "content_section": {
+      "type": "component",
+      "component": "assistant-page.assistant-content",
+      "repeatable": true
+    },
+    "workflow_section": {
+      "type": "component",
+      "component": "assistant-page.work-flow",
+      "repeatable": true
+    },
+    "smartsupport_section": {
+      "type": "component",
+      "component": "assistant-page.smart-support",
+      "repeatable": true
     }
   }
 }
