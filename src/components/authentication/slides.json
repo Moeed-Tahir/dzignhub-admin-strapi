@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_authentication_slides",
+  "info": {
+    "displayName": "slides"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

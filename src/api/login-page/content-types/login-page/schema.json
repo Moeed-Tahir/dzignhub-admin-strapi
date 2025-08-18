@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "login_pages",
+  "info": {
+    "singularName": "login-page",
+    "pluralName": "login-pages",
+    "displayName": "LoginPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subheading": {
+      "type": "string"
+    },
+    "emailLabel": {
+      "type": "string"
+    },
+    "passwordLabel": {
+      "type": "string"
+    },
+    "rememberMeLabel": {
+      "type": "string"
+    },
+    "forgotPasswordText": {
+      "type": "string"
+    },
+    "loginButtonText": {
+      "type": "string"
+    },
+    "orText": {
+      "type": "string"
+    },
+    "googleButtonText": {
+      "type": "string"
+    },
+    "googleIcon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "appleButtonText": {
+      "type": "string"
+    },
+    "appleIcon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "signupText": {
+      "type": "string"
+    },
+    "side": {
+      "type": "component",
+      "component": "authentication.side-component",
+      "repeatable": true
+    }
+  }
+}

@@ -114,6 +114,32 @@ export interface AssistantPageWorkFlowItem extends Struct.ComponentSchema {
   };
 }
 
+export interface AuthenticationSideComponent extends Struct.ComponentSchema {
+  collectionName: 'components_authentication_side_components';
+  info: {
+    displayName: 'SideComponent';
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    brandIcon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    brandTitle: Schema.Attribute.String;
+    slides: Schema.Attribute.Component<'authentication.slides', true>;
+  };
+}
+
+export interface AuthenticationSlides extends Struct.ComponentSchema {
+  collectionName: 'components_authentication_slides';
+  info: {
+    displayName: 'slides';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface BlogPageBlogSection extends Struct.ComponentSchema {
   collectionName: 'components_blog_page_blog_sections';
   info: {
@@ -577,6 +603,8 @@ declare module '@strapi/strapi' {
       'assistant-page.work-card': AssistantPageWorkCard;
       'assistant-page.work-flow': AssistantPageWorkFlow;
       'assistant-page.work-flow-item': AssistantPageWorkFlowItem;
+      'authentication.side-component': AuthenticationSideComponent;
+      'authentication.slides': AuthenticationSlides;
       'blog-page.blog-section': BlogPageBlogSection;
       'blog-page.post': BlogPagePost;
       'contact-page.form': ContactPageForm;

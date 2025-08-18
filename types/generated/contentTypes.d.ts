@@ -565,6 +565,49 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiLoginPageLoginPage extends Struct.CollectionTypeSchema {
+  collectionName: 'login_pages';
+  info: {
+    displayName: 'LoginPage';
+    pluralName: 'login-pages';
+    singularName: 'login-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    appleButtonText: Schema.Attribute.String;
+    appleIcon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    emailLabel: Schema.Attribute.String;
+    forgotPasswordText: Schema.Attribute.String;
+    googleButtonText: Schema.Attribute.String;
+    googleIcon: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    heading: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::login-page.login-page'
+    > &
+      Schema.Attribute.Private;
+    loginButtonText: Schema.Attribute.String;
+    orText: Schema.Attribute.String;
+    passwordLabel: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    rememberMeLabel: Schema.Attribute.String;
+    side: Schema.Attribute.Component<'authentication.side-component', true>;
+    signupText: Schema.Attribute.String;
+    subheading: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiMediaPageMediaPage extends Struct.CollectionTypeSchema {
   collectionName: 'media_pages';
   info: {
@@ -1124,6 +1167,7 @@ declare module '@strapi/strapi' {
       'api::blog-page.blog-page': ApiBlogPageBlogPage;
       'api::contact-page.contact-page': ApiContactPageContactPage;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
+      'api::login-page.login-page': ApiLoginPageLoginPage;
       'api::media-page.media-page': ApiMediaPageMediaPage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
