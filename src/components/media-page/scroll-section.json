@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_media_page_scroll_sections",
+  "info": {
+    "displayName": "ScrollSection"
+  },
+  "options": {},
+  "attributes": {
+    "key": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "component": "media-page.scroll-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

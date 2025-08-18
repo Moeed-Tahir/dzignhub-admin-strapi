@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_media_page_creation_cards",
+  "info": {
+    "displayName": "CreationCard"
+  },
+  "options": {},
+  "attributes": {
+    "id_number": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "button_text": {
+      "type": "component",
+      "component": "landing-page.array",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

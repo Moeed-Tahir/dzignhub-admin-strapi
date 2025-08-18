@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_media_page_toolkit_sections",
+  "info": {
+    "displayName": "ToolkitSection"
+  },
+  "options": {},
+  "attributes": {
+    "key": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "tabs": {
+      "type": "component",
+      "component": "media-page.toolkit-tab",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

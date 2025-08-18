@@ -398,6 +398,114 @@ export interface LandingPageWorkCard extends Struct.ComponentSchema {
   };
 }
 
+export interface MediaPageCreationCard extends Struct.ComponentSchema {
+  collectionName: 'components_media_page_creation_cards';
+  info: {
+    displayName: 'CreationCard';
+  };
+  attributes: {
+    button_text: Schema.Attribute.Component<'landing-page.array', true>;
+    id_number: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    text: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface MediaPageCreationSection extends Struct.ComponentSchema {
+  collectionName: 'components_media_page_creation_sections';
+  info: {
+    displayName: 'CreationSection';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'media-page.creation-card', true>;
+    cta_label: Schema.Attribute.String;
+    cta_secondary_label: Schema.Attribute.String;
+    key: Schema.Attribute.String;
+    stats_heading: Schema.Attribute.String;
+    stats_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    stats_paragraph: Schema.Attribute.Text;
+    subtitle: Schema.Attribute.String;
+    title_highlight: Schema.Attribute.String;
+    title_post: Schema.Attribute.String;
+    title_pre: Schema.Attribute.String;
+  };
+}
+
+export interface MediaPageHero extends Struct.ComponentSchema {
+  collectionName: 'components_media_page_heroes';
+  info: {
+    displayName: 'Hero';
+  };
+  attributes: {
+    ctaLabel: Schema.Attribute.String;
+    key: Schema.Attribute.String;
+    leftImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    mainImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    placeholderPrompt: Schema.Attribute.Text;
+    rightImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    subtitle: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface MediaPageScrollCard extends Struct.ComponentSchema {
+  collectionName: 'components_media_page_scroll_cards';
+  info: {
+    displayName: 'ScrollCard';
+  };
+  attributes: {
+    button_text: Schema.Attribute.String;
+    id_number: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    side: Schema.Attribute.Enumeration<['left', 'right']>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface MediaPageScrollSection extends Struct.ComponentSchema {
+  collectionName: 'components_media_page_scroll_sections';
+  info: {
+    displayName: 'ScrollSection';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'media-page.scroll-card', true>;
+    key: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface MediaPageToolkitSection extends Struct.ComponentSchema {
+  collectionName: 'components_media_page_toolkit_sections';
+  info: {
+    displayName: 'ToolkitSection';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    key: Schema.Attribute.String;
+    tabs: Schema.Attribute.Component<'media-page.toolkit-tab', true>;
+  };
+}
+
+export interface MediaPageToolkitTab extends Struct.ComponentSchema {
+  collectionName: 'components_media_page_toolkit_tabs';
+  info: {
+    displayName: 'ToolkitTab';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    label: Schema.Attribute.String;
+    paragraphs: Schema.Attribute.Component<'landing-page.array', true>;
+    slug: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -426,6 +534,13 @@ declare module '@strapi/strapi' {
       'landing-page.testimonials': LandingPageTestimonials;
       'landing-page.testimonials-section': LandingPageTestimonialsSection;
       'landing-page.work-card': LandingPageWorkCard;
+      'media-page.creation-card': MediaPageCreationCard;
+      'media-page.creation-section': MediaPageCreationSection;
+      'media-page.hero': MediaPageHero;
+      'media-page.scroll-card': MediaPageScrollCard;
+      'media-page.scroll-section': MediaPageScrollSection;
+      'media-page.toolkit-section': MediaPageToolkitSection;
+      'media-page.toolkit-tab': MediaPageToolkitTab;
     }
   }
 }

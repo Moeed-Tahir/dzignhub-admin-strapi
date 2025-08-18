@@ -1,0 +1,52 @@
+{
+  "collectionName": "components_media_page_creation_sections",
+  "info": {
+    "displayName": "CreationSection"
+  },
+  "options": {},
+  "attributes": {
+    "key": {
+      "type": "string"
+    },
+    "title_pre": {
+      "type": "string"
+    },
+    "title_highlight": {
+      "type": "string"
+    },
+    "title_post": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "cta_label": {
+      "type": "string"
+    },
+    "cta_secondary_label": {
+      "type": "string"
+    },
+    "stats_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "stats_heading": {
+      "type": "string"
+    },
+    "stats_paragraph": {
+      "type": "text"
+    },
+    "cards": {
+      "type": "component",
+      "component": "media-page.creation-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
