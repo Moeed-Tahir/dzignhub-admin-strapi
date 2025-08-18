@@ -15,6 +15,11 @@
       "type": "component",
       "component": "contact-page.form",
       "repeatable": false
+    },
+    "faq_section": {
+      "type": "component",
+      "component": "global.faq-section",
+      "repeatable": true
     }
   }
 }

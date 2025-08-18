@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_global_faq_sections",
+  "info": {
+    "displayName": "FAQSection"
+  },
+  "options": {},
+  "attributes": {
+    "key": {
+      "type": "enumeration",
+      "enum": [
+        "landing",
+        "pricing",
+        "contactUs",
+        "imageCreation",
+        "videoCreation",
+        "brandDesigner",
+        "contentWriter",
+        "ui_ux",
+        "seo",
+        "strategyAssistant"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "faqs": {
+      "type": "component",
+      "component": "global.faq-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

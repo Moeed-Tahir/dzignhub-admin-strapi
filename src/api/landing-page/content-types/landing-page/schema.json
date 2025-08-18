@@ -61,6 +61,11 @@
       "type": "component",
       "component": "landing-page.assistant-section",
       "repeatable": true
+    },
+    "faq_section": {
+      "type": "component",
+      "component": "global.faq-section",
+      "repeatable": true
     }
   }
 }

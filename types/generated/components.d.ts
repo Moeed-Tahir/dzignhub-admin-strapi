@@ -185,6 +185,43 @@ export interface ContactPageForm extends Struct.ComponentSchema {
   };
 }
 
+export interface GlobalFaqItem extends Struct.ComponentSchema {
+  collectionName: 'components_global_faq_items';
+  info: {
+    displayName: 'FAQItem';
+  };
+  attributes: {
+    answer: Schema.Attribute.String;
+    question: Schema.Attribute.String;
+  };
+}
+
+export interface GlobalFaqSection extends Struct.ComponentSchema {
+  collectionName: 'components_global_faq_sections';
+  info: {
+    displayName: 'FAQSection';
+  };
+  attributes: {
+    faqs: Schema.Attribute.Component<'global.faq-item', true>;
+    key: Schema.Attribute.Enumeration<
+      [
+        'landing',
+        'pricing',
+        'contactUs',
+        'imageCreation',
+        'videoCreation',
+        'brandDesigner',
+        'contentWriter',
+        'ui_ux',
+        'seo',
+        'strategyAssistant',
+      ]
+    >;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface LandingPageArray extends Struct.ComponentSchema {
   collectionName: 'components_landing_page_arrays';
   info: {
@@ -434,6 +471,29 @@ export interface MediaPageCreationSection extends Struct.ComponentSchema {
   };
 }
 
+export interface MediaPageDownloadSection extends Struct.ComponentSchema {
+  collectionName: 'components_media_page_download_sections';
+  info: {
+    displayName: 'DownloadSection';
+  };
+  attributes: {
+    arrow_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    background_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    cta_label: Schema.Attribute.String;
+    cta_link: Schema.Attribute.String;
+    hero_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    key: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface MediaPageHero extends Struct.ComponentSchema {
   collectionName: 'components_media_page_heroes';
   info: {
@@ -520,6 +580,8 @@ declare module '@strapi/strapi' {
       'blog-page.blog-section': BlogPageBlogSection;
       'blog-page.post': BlogPagePost;
       'contact-page.form': ContactPageForm;
+      'global.faq-item': GlobalFaqItem;
+      'global.faq-section': GlobalFaqSection;
       'landing-page.array': LandingPageArray;
       'landing-page.assistant-item': LandingPageAssistantItem;
       'landing-page.assistant-section': LandingPageAssistantSection;
@@ -536,6 +598,7 @@ declare module '@strapi/strapi' {
       'landing-page.work-card': LandingPageWorkCard;
       'media-page.creation-card': MediaPageCreationCard;
       'media-page.creation-section': MediaPageCreationSection;
+      'media-page.download-section': MediaPageDownloadSection;
       'media-page.hero': MediaPageHero;
       'media-page.scroll-card': MediaPageScrollCard;
       'media-page.scroll-section': MediaPageScrollSection;

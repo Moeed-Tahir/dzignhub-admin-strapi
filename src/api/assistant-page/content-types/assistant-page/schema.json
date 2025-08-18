@@ -40,6 +40,11 @@
       "type": "component",
       "component": "assistant-page.smart-support",
       "repeatable": true
+    },
+    "faq_section": {
+      "type": "component",
+      "component": "global.faq-section",
+      "repeatable": true
     }
   }
 }

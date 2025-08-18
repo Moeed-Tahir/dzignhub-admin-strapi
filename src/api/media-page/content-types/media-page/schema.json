@@ -30,6 +30,16 @@
       "type": "component",
       "component": "media-page.toolkit-section",
       "repeatable": true
+    },
+    "faq_section": {
+      "type": "component",
+      "component": "global.faq-section",
+      "repeatable": true
+    },
+    "download_section": {
+      "type": "component",
+      "component": "media-page.download-section",
+      "repeatable": true
     }
   }
 }

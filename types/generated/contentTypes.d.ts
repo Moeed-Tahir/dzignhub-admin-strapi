@@ -429,6 +429,7 @@ export interface ApiAssistantPageAssistantPage
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    faq_section: Schema.Attribute.Component<'global.faq-section', true>;
     hero_section: Schema.Attribute.Component<
       'assistant-page.assistant-hero-item',
       true
@@ -501,6 +502,7 @@ export interface ApiContactPageContactPage extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    faq_section: Schema.Attribute.Component<'global.faq-section', true>;
     form: Schema.Attribute.Component<'contact-page.form', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -539,6 +541,7 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
       'landing-page.download-section',
       false
     >;
+    faq_section: Schema.Attribute.Component<'global.faq-section', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -580,6 +583,11 @@ export interface ApiMediaPageMediaPage extends Struct.CollectionTypeSchema {
       'media-page.creation-section',
       true
     >;
+    download_section: Schema.Attribute.Component<
+      'media-page.download-section',
+      true
+    >;
+    faq_section: Schema.Attribute.Component<'global.faq-section', true>;
     hero_section: Schema.Attribute.Component<'media-page.hero', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
