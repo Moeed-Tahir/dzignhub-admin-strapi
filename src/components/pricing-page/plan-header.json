@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_pricing_page_plan_headers",
+  "info": {
+    "displayName": "plan_header"
+  },
+  "options": {},
+  "attributes": {
+    "plan_name": {
+      "type": "string"
+    },
+    "is_highlighted": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

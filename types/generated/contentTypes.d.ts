@@ -653,6 +653,41 @@ export interface ApiMediaPageMediaPage extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiPricingPagePricingPage extends Struct.CollectionTypeSchema {
+  collectionName: 'pricing_pages';
+  info: {
+    displayName: 'PricingPage';
+    pluralName: 'pricing-pages';
+    singularName: 'pricing-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faq_section: Schema.Attribute.Component<'global.faq-section', false>;
+    hero_section: Schema.Attribute.Component<'pricing-page.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pricing-page.pricing-page'
+    > &
+      Schema.Attribute.Private;
+    plan_section: Schema.Attribute.Component<'landing-page.plan-item', true>;
+    plans: Schema.Attribute.Component<'pricing-page.plans-page', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    testimonials_section: Schema.Attribute.Component<
+      'landing-page.testimonials-section',
+      true
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1169,6 +1204,7 @@ declare module '@strapi/strapi' {
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::login-page.login-page': ApiLoginPageLoginPage;
       'api::media-page.media-page': ApiMediaPageMediaPage;
+      'api::pricing-page.pricing-page': ApiPricingPagePricingPage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

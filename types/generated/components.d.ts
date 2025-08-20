@@ -592,6 +592,88 @@ export interface MediaPageToolkitTab extends Struct.ComponentSchema {
   };
 }
 
+export interface PricingPageFeatureRow extends Struct.ComponentSchema {
+  collectionName: 'components_pricing_page_feature_rows';
+  info: {
+    displayName: 'feature_row';
+  };
+  attributes: {
+    creator_plan: Schema.Attribute.String;
+    creatorplan_icon: Schema.Attribute.Enumeration<['none', 'tick', 'cross']>;
+    enterprise_plan: Schema.Attribute.String;
+    enterpriseplan_icon: Schema.Attribute.Enumeration<
+      ['none', 'tick', 'cross']
+    >;
+    feature_name: Schema.Attribute.String;
+    free_plan: Schema.Attribute.String;
+    freeplan_icon: Schema.Attribute.Enumeration<['none', 'tick', 'cross']>;
+    icon_type: Schema.Attribute.Enumeration<
+      [
+        'none',
+        'tick',
+        'cross',
+        'info',
+        'play',
+        'info_cross',
+        'info_tick',
+        'play_cross',
+        'play_tick',
+      ]
+    >;
+    is_highlighted: Schema.Attribute.Boolean;
+    starter_plan: Schema.Attribute.String;
+    starterplan_icon: Schema.Attribute.Enumeration<['none', 'tick', 'cross']>;
+  };
+}
+
+export interface PricingPageHero extends Struct.ComponentSchema {
+  collectionName: 'components_pricing_page_heroes';
+  info: {
+    displayName: 'Hero';
+  };
+  attributes: {
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface PricingPagePlanHeader extends Struct.ComponentSchema {
+  collectionName: 'components_pricing_page_plan_headers';
+  info: {
+    displayName: 'plan_header';
+  };
+  attributes: {
+    is_highlighted: Schema.Attribute.Boolean;
+    plan_name: Schema.Attribute.String;
+  };
+}
+
+export interface PricingPagePlansPage extends Struct.ComponentSchema {
+  collectionName: 'components_pricing_page_plans_pages';
+  info: {
+    displayName: 'plans_page';
+  };
+  attributes: {
+    plan_header: Schema.Attribute.Component<'pricing-page.plan-header', true>;
+    plan_sections: Schema.Attribute.Component<
+      'pricing-page.plans-section',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface PricingPagePlansSection extends Struct.ComponentSchema {
+  collectionName: 'components_pricing_page_plans_sections';
+  info: {
+    displayName: 'plans_section';
+  };
+  attributes: {
+    features: Schema.Attribute.Component<'pricing-page.feature-row', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -632,6 +714,11 @@ declare module '@strapi/strapi' {
       'media-page.scroll-section': MediaPageScrollSection;
       'media-page.toolkit-section': MediaPageToolkitSection;
       'media-page.toolkit-tab': MediaPageToolkitTab;
+      'pricing-page.feature-row': PricingPageFeatureRow;
+      'pricing-page.hero': PricingPageHero;
+      'pricing-page.plan-header': PricingPagePlanHeader;
+      'pricing-page.plans-page': PricingPagePlansPage;
+      'pricing-page.plans-section': PricingPagePlansSection;
     }
   }
 }

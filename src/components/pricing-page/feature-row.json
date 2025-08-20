@@ -1,0 +1,74 @@
+{
+  "collectionName": "components_pricing_page_feature_rows",
+  "info": {
+    "displayName": "feature_row"
+  },
+  "options": {},
+  "attributes": {
+    "feature_name": {
+      "type": "string"
+    },
+    "free_plan": {
+      "type": "string"
+    },
+    "starter_plan": {
+      "type": "string"
+    },
+    "creator_plan": {
+      "type": "string"
+    },
+    "enterprise_plan": {
+      "type": "string"
+    },
+    "is_highlighted": {
+      "type": "boolean"
+    },
+    "icon_type": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "tick",
+        "cross",
+        "info",
+        "play",
+        "info_cross",
+        "info_tick",
+        "play_cross",
+        "play_tick"
+      ]
+    },
+    "starterplan_icon": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "tick",
+        "cross"
+      ]
+    },
+    "freeplan_icon": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "tick",
+        "cross"
+      ]
+    },
+    "enterpriseplan_icon": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "tick",
+        "cross"
+      ]
+    },
+    "creatorplan_icon": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "tick",
+        "cross"
+      ]
+    }
+  },
+  "config": {}
+}
