@@ -211,6 +211,41 @@ export interface ContactPageForm extends Struct.ComponentSchema {
   };
 }
 
+export interface FooterFooterSections extends Struct.ComponentSchema {
+  collectionName: 'components_footer_footer_sections';
+  info: {
+    displayName: 'FooterSections';
+  };
+  attributes: {
+    links: Schema.Attribute.Component<'footer.links', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface FooterLinks extends Struct.ComponentSchema {
+  collectionName: 'components_footer_links';
+  info: {
+    displayName: 'links';
+  };
+  attributes: {
+    href: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface FooterSocialLinks extends Struct.ComponentSchema {
+  collectionName: 'components_footer_social_links';
+  info: {
+    displayName: 'SocialLinks';
+  };
+  attributes: {
+    alt: Schema.Attribute.String;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    platform: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
 export interface GlobalFaqItem extends Struct.ComponentSchema {
   collectionName: 'components_global_faq_items';
   info: {
@@ -336,6 +371,28 @@ export interface LandingPageDownloadSection extends Struct.ComponentSchema {
     >;
     preTitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface LandingPageHero extends Struct.ComponentSchema {
+  collectionName: 'components_landing_page_heroes';
+  info: {
+    displayName: 'Hero';
+  };
+  attributes: {
+    announcementIcon: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    announcementText: Schema.Attribute.String;
+    ctaButtonText: Schema.Attribute.String;
+    ctaInputPlaceholder: Schema.Attribute.Text;
+    ctaLink: Schema.Attribute.String;
+    ctaSecondaryText: Schema.Attribute.String;
+    earlyAccessLink: Schema.Attribute.String;
+    earlyAccessText: Schema.Attribute.String;
+    mainDescription: Schema.Attribute.String;
+    mainHeading: Schema.Attribute.String;
+    showAnnouncement: Schema.Attribute.Boolean;
   };
 }
 
@@ -674,6 +731,42 @@ export interface PricingPagePlansSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SignupButtonConfig extends Struct.ComponentSchema {
+  collectionName: 'components_signup_button_configs';
+  info: {
+    displayName: 'ButtonConfig';
+  };
+  attributes: {
+    loadingText: Schema.Attribute.String;
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface SignupFormField extends Struct.ComponentSchema {
+  collectionName: 'components_signup_form_fields';
+  info: {
+    displayName: 'FormField';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    placeholder: Schema.Attribute.String;
+    required: Schema.Attribute.Boolean;
+    type: Schema.Attribute.String;
+  };
+}
+
+export interface SignupLinkConfig extends Struct.ComponentSchema {
+  collectionName: 'components_signup_link_configs';
+  info: {
+    displayName: 'LinkConfig';
+  };
+  attributes: {
+    linkText: Schema.Attribute.String;
+    preText: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -690,6 +783,9 @@ declare module '@strapi/strapi' {
       'blog-page.blog-section': BlogPageBlogSection;
       'blog-page.post': BlogPagePost;
       'contact-page.form': ContactPageForm;
+      'footer.footer-sections': FooterFooterSections;
+      'footer.links': FooterLinks;
+      'footer.social-links': FooterSocialLinks;
       'global.faq-item': GlobalFaqItem;
       'global.faq-section': GlobalFaqSection;
       'landing-page.array': LandingPageArray;
@@ -698,6 +794,7 @@ declare module '@strapi/strapi' {
       'landing-page.card-item': LandingPageCardItem;
       'landing-page.carousal': LandingPageCarousal;
       'landing-page.download-section': LandingPageDownloadSection;
+      'landing-page.hero': LandingPageHero;
       'landing-page.hero-section': LandingPageHeroSection;
       'landing-page.plan-item': LandingPagePlanItem;
       'landing-page.stack-card': LandingPageStackCard;
@@ -719,6 +816,9 @@ declare module '@strapi/strapi' {
       'pricing-page.plan-header': PricingPagePlanHeader;
       'pricing-page.plans-page': PricingPagePlansPage;
       'pricing-page.plans-section': PricingPagePlansSection;
+      'signup.button-config': SignupButtonConfig;
+      'signup.form-field': SignupFormField;
+      'signup.link-config': SignupLinkConfig;
     }
   }
 }

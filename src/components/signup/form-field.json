@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_signup_form_fields",
+  "info": {
+    "displayName": "FormField"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "required": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

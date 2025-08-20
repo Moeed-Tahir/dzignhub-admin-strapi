@@ -17,6 +17,11 @@
     "MainDescription": {
       "type": "text"
     },
+    "hero_section": {
+      "type": "component",
+      "component": "landing-page.hero",
+      "repeatable": false
+    },
     "carousal_images": {
       "type": "component",
       "component": "landing-page.carousal",

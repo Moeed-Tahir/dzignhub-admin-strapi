@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_signup_link_configs",
+  "info": {
+    "displayName": "LinkConfig"
+  },
+  "options": {},
+  "attributes": {
+    "preText": {
+      "type": "string"
+    },
+    "linkText": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_signup_button_configs",
+  "info": {
+    "displayName": "ButtonConfig"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "loadingText": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

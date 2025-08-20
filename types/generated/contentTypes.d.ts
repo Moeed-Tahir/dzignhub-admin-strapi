@@ -517,6 +517,40 @@ export interface ApiContactPageContactPage extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFooterFooter extends Struct.CollectionTypeSchema {
+  collectionName: 'footers';
+  info: {
+    displayName: 'Footer';
+    pluralName: 'footers';
+    singularName: 'footer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    companyName: Schema.Attribute.String;
+    copyrightText: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    footerSections: Schema.Attribute.Component<'footer.footer-sections', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::footer.footer'
+    > &
+      Schema.Attribute.Private;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    logoAlt: Schema.Attribute.String;
+    navigationItems: Schema.Attribute.Component<'footer.links', true>;
+    publishedAt: Schema.Attribute.DateTime;
+    socialLinks: Schema.Attribute.Component<'footer.social-links', true>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
   collectionName: 'landing_pages';
   info: {
@@ -542,6 +576,7 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
       false
     >;
     faq_section: Schema.Attribute.Component<'global.faq-section', true>;
+    hero_section: Schema.Attribute.Component<'landing-page.hero', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -682,6 +717,45 @@ export interface ApiPricingPagePricingPage extends Struct.CollectionTypeSchema {
       'landing-page.testimonials-section',
       true
     >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSignupPageSignupPage extends Struct.CollectionTypeSchema {
+  collectionName: 'signup_pages';
+  info: {
+    displayName: 'SignupPage';
+    pluralName: 'signup-pages';
+    singularName: 'signup-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    confirmpassword_field: Schema.Attribute.Component<
+      'signup.form-field',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email_field: Schema.Attribute.Component<'signup.form-field', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::signup-page.signup-page'
+    > &
+      Schema.Attribute.Private;
+    LoginLink: Schema.Attribute.Component<'signup.link-config', false>;
+    mobile_field: Schema.Attribute.Component<'signup.form-field', false>;
+    pageDescription: Schema.Attribute.String;
+    pageTitle: Schema.Attribute.String;
+    password_field: Schema.Attribute.Component<'signup.form-field', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    submitButton: Schema.Attribute.Component<'signup.button-config', false>;
+    termsText: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1201,10 +1275,12 @@ declare module '@strapi/strapi' {
       'api::assistant-page.assistant-page': ApiAssistantPageAssistantPage;
       'api::blog-page.blog-page': ApiBlogPageBlogPage;
       'api::contact-page.contact-page': ApiContactPageContactPage;
+      'api::footer.footer': ApiFooterFooter;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::login-page.login-page': ApiLoginPageLoginPage;
       'api::media-page.media-page': ApiMediaPageMediaPage;
       'api::pricing-page.pricing-page': ApiPricingPagePricingPage;
+      'api::signup-page.signup-page': ApiSignupPageSignupPage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

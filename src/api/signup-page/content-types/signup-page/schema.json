@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "signup_pages",
+  "info": {
+    "singularName": "signup-page",
+    "pluralName": "signup-pages",
+    "displayName": "SignupPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pageTitle": {
+      "type": "string"
+    },
+    "pageDescription": {
+      "type": "string"
+    },
+    "email_field": {
+      "type": "component",
+      "component": "signup.form-field",
+      "repeatable": false
+    },
+    "submitButton": {
+      "type": "component",
+      "component": "signup.button-config",
+      "repeatable": false
+    },
+    "termsText": {
+      "type": "text"
+    },
+    "LoginLink": {
+      "type": "component",
+      "component": "signup.link-config",
+      "repeatable": false
+    },
+    "mobile_field": {
+      "type": "component",
+      "component": "signup.form-field",
+      "repeatable": false
+    },
+    "password_field": {
+      "type": "component",
+      "component": "signup.form-field",
+      "repeatable": false
+    },
+    "confirmpassword_field": {
+      "type": "component",
+      "component": "signup.form-field",
+      "repeatable": false
+    }
+  }
+}
