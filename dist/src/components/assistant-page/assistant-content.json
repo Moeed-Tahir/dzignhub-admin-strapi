@@ -1,0 +1,39 @@
+{
+    "collectionName": "components_assistant_page_assistant_contents",
+    "info": {
+        "displayName": "AssistantContent"
+    },
+    "options": {},
+    "attributes": {
+        "key": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "image": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "sectionTitle": {
+            "type": "string"
+        },
+        "steps": {
+            "type": "component",
+            "component": "landing-page.array",
+            "repeatable": true
+        },
+        "flexCards": {
+            "type": "component",
+            "component": "landing-page.array",
+            "repeatable": true
+        }
+    },
+    "config": {}
+}

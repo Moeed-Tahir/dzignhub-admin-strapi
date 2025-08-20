@@ -1,0 +1,38 @@
+{
+    "collectionName": "components_authentication_side_components",
+    "info": {
+        "displayName": "SideComponent"
+    },
+    "options": {},
+    "attributes": {
+        "brandTitle": {
+            "type": "string"
+        },
+        "brandIcon": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "slides": {
+            "type": "component",
+            "component": "authentication.slides",
+            "repeatable": true
+        },
+        "backgroundImage": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        }
+    },
+    "config": {}
+}

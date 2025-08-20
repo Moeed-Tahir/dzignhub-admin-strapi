@@ -1,0 +1,40 @@
+{
+    "kind": "collectionType",
+    "collectionName": "pricing_pages",
+    "info": {
+        "singularName": "pricing-page",
+        "pluralName": "pricing-pages",
+        "displayName": "PricingPage"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "hero_section": {
+            "type": "component",
+            "component": "pricing-page.hero",
+            "repeatable": false
+        },
+        "plan_section": {
+            "type": "component",
+            "component": "landing-page.plan-item",
+            "repeatable": true
+        },
+        "plans": {
+            "type": "component",
+            "component": "pricing-page.plans-page",
+            "repeatable": false
+        },
+        "testimonials_section": {
+            "type": "component",
+            "component": "landing-page.testimonials-section",
+            "repeatable": true
+        },
+        "faq_section": {
+            "type": "component",
+            "component": "global.faq-section",
+            "repeatable": false
+        }
+    }
+}

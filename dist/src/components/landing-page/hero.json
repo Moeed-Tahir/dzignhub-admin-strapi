@@ -1,0 +1,50 @@
+{
+    "collectionName": "components_landing_page_heroes",
+    "info": {
+        "displayName": "Hero"
+    },
+    "options": {},
+    "attributes": {
+        "mainHeading": {
+            "type": "string"
+        },
+        "mainDescription": {
+            "type": "string"
+        },
+        "announcementIcon": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "announcementText": {
+            "type": "string"
+        },
+        "earlyAccessText": {
+            "type": "string"
+        },
+        "earlyAccessLink": {
+            "type": "string"
+        },
+        "ctaButtonText": {
+            "type": "string"
+        },
+        "ctaSecondaryText": {
+            "type": "string"
+        },
+        "ctaLink": {
+            "type": "string"
+        },
+        "ctaInputPlaceholder": {
+            "type": "text"
+        },
+        "showAnnouncement": {
+            "type": "boolean"
+        }
+    },
+    "config": {}
+}

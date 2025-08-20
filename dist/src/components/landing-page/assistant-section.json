@@ -1,0 +1,24 @@
+{
+    "collectionName": "components_landing_page_assistant_sections",
+    "info": {
+        "displayName": "AssistantSection"
+    },
+    "options": {},
+    "attributes": {
+        "headingPre": {
+            "type": "string"
+        },
+        "headingHighlight": {
+            "type": "string"
+        },
+        "headingPost": {
+            "type": "string"
+        },
+        "assistants": {
+            "type": "component",
+            "component": "landing-page.assistant-item",
+            "repeatable": true
+        }
+    },
+    "config": {}
+}

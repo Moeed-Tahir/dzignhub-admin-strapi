@@ -1,0 +1,56 @@
+{
+    "collectionName": "components_contact_page_forms",
+    "info": {
+        "displayName": "form"
+    },
+    "options": {},
+    "attributes": {
+        "formTitle": {
+            "type": "string"
+        },
+        "firstNameLabel": {
+            "type": "string"
+        },
+        "lastNameLabel": {
+            "type": "string"
+        },
+        "emailLabel": {
+            "type": "string"
+        },
+        "messageLabel": {
+            "type": "string"
+        },
+        "firstNamePlaceholder": {
+            "type": "string"
+        },
+        "lastNamePlaceholder": {
+            "type": "string"
+        },
+        "emailPlaceholder": {
+            "type": "string"
+        },
+        "messagePlaceholder": {
+            "type": "string"
+        },
+        "submitButtonLabel": {
+            "type": "string"
+        },
+        "successMessage": {
+            "type": "string"
+        },
+        "failureMessage": {
+            "type": "string"
+        },
+        "contactImage": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        }
+    },
+    "config": {}
+}

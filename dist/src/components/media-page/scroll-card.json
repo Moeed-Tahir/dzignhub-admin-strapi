@@ -1,0 +1,39 @@
+{
+    "collectionName": "components_media_page_scroll_cards",
+    "info": {
+        "displayName": "ScrollCard"
+    },
+    "options": {},
+    "attributes": {
+        "id_number": {
+            "type": "string"
+        },
+        "side": {
+            "type": "enumeration",
+            "enum": [
+                "left",
+                "right"
+            ]
+        },
+        "title": {
+            "type": "string"
+        },
+        "subtitle": {
+            "type": "string"
+        },
+        "button_text": {
+            "type": "string"
+        },
+        "image": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        }
+    },
+    "config": {}
+}

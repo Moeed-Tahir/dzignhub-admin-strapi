@@ -1,0 +1,1 @@
+import{j as t}from"./strapi-CpZg2JrV.js";import{ListPageCE as i}from"./ListPage-Xu40qKFr.js";import{u as o}from"./useLicenseLimitNotification-Cm6zVFFA.js";import"./SearchInput-DtGy5-ZM.js";import"./users-DLc-PG84.js";import"./SelectRoles-30kqtwRx.js";import"./useAdminRoles-BncBWUWA.js";import"./isNil-DMKF7c8x.js";const u=()=>(o(),t.jsx(i,{}));export{u as UserListPageEE};

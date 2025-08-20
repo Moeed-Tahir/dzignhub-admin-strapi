@@ -1,0 +1,23 @@
+{
+    "collectionName": "components_pricing_page_plans_pages",
+    "info": {
+        "displayName": "plans_page"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "plan_header": {
+            "type": "component",
+            "component": "pricing-page.plan-header",
+            "repeatable": true
+        },
+        "plan_sections": {
+            "type": "component",
+            "component": "pricing-page.plans-section",
+            "repeatable": true
+        }
+    },
+    "config": {}
+}

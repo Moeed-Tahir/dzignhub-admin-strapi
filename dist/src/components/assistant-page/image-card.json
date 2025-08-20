@@ -1,0 +1,29 @@
+{
+    "collectionName": "components_assistant_page_image_cards",
+    "info": {
+        "displayName": "ImageCard"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "subtitle": {
+            "type": "string"
+        },
+        "image": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "key": {
+            "type": "string"
+        }
+    },
+    "config": {}
+}

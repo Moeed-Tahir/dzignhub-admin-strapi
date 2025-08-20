@@ -1,0 +1,97 @@
+{
+    "collectionName": "components_blog_page_posts",
+    "info": {
+        "displayName": "post"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "slug": {
+            "type": "string"
+        },
+        "excerpt": {
+            "type": "text"
+        },
+        "date": {
+            "type": "date"
+        },
+        "imageHeader": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "image1": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "image1Reference": {
+            "type": "string"
+        },
+        "image2": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "image2Reference": {
+            "type": "string"
+        },
+        "quote": {
+            "type": "text"
+        },
+        "quoteReference": {
+            "type": "string"
+        },
+        "contentIntro": {
+            "type": "text"
+        },
+        "contentAfterQuote": {
+            "type": "text"
+        },
+        "contentResources": {
+            "type": "text"
+        },
+        "contentResourcesList": {
+            "type": "component",
+            "component": "landing-page.array",
+            "repeatable": true
+        },
+        "contentFinal": {
+            "type": "text"
+        },
+        "conclusion": {
+            "type": "text"
+        },
+        "featuredImage": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "link": {
+            "type": "string"
+        }
+    },
+    "config": {}
+}

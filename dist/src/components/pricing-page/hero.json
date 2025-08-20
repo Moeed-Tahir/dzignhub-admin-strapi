@@ -1,0 +1,16 @@
+{
+    "collectionName": "components_pricing_page_heroes",
+    "info": {
+        "displayName": "Hero"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "subtitle": {
+            "type": "string"
+        }
+    },
+    "config": {}
+}

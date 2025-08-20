@@ -1,0 +1,55 @@
+{
+    "collectionName": "components_media_page_download_sections",
+    "info": {
+        "displayName": "DownloadSection"
+    },
+    "options": {},
+    "attributes": {
+        "key": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "subtitle": {
+            "type": "string"
+        },
+        "cta_label": {
+            "type": "string"
+        },
+        "cta_link": {
+            "type": "string"
+        },
+        "background_image": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "arrow_image": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "hero_image": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        }
+    },
+    "config": {}
+}
